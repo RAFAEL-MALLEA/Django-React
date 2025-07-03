@@ -15,9 +15,6 @@ backend/               # Backend Django
 ├── api/              # App API con endpoints
 ├── requirements.txt  # Dependencias Python
 └── manage.py         # Script de Django
-
-server/               # Backend Express (original - opcional)
-shared/               # Tipos compartidos
 ```
 
 ## Configuración Inicial
@@ -31,7 +28,7 @@ npm install
 ### 2. Configurar el backend Django
 
 ```bash
-# Instalar dependencias Python
+# Instalar dependencias Python y configurar DB
 npm run setup:django
 
 # O manualmente:
@@ -105,12 +102,12 @@ El backend Django está configurado para aceptar requests desde:
 
 Por defecto usa SQLite (`backend/db.sqlite3`). Para usar PostgreSQL u otra base de datos, actualiza la configuración en `backend/myproject/settings.py`.
 
-## Notas Importantes
+## Tecnologías
 
-1. **Asegúrate de tener Python instalado** (3.8+)
-2. **Usa `npm run dev:full`** para correr ambos servidores
-3. **El frontend hace requests a puerto 8000** (Django)
-4. **Los archivos base están listos** - sin código de relleno
+- **Frontend**: React 18 + TypeScript + Vite + TailwindCSS
+- **Backend**: Django 4.2 + Django REST Framework
+- **Base de datos**: SQLite (por defecto)
+- **Desarrollo**: Vite dev server + Django runserver
 
 ## Próximos Pasos
 
