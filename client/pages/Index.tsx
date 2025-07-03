@@ -29,10 +29,10 @@ export default function Index() {
       const data = (await response.json()) as DjangoResponse;
       setDjangoData(data);
       setError(null);
-    } catch (error) {
-      console.error("Error fetching Django data:", error);
+    } catch (fetchError) {
+      console.error("Error fetching Django data:", fetchError);
       setError(
-        "No se pudo conectar con el backend Django. Asegúrate de que esté corriendo en el puerto 8000.",
+        "No se pudo conectar con el backend Django. Para iniciar Django ejecuta: cd backend && python manage.py runserver 8000",
       );
     } finally {
       setLoading(false);
