@@ -86,8 +86,8 @@ export default function Index() {
             <div className="bg-gray-800 text-green-400 p-3 rounded text-left text-sm font-mono mb-3">
               <div>cd backend</div>
               <div>pip install -r requirements.txt</div>
-              <div>python manage.py migrate</div>
               <div>python manage.py runserver 8000</div>
+              <div>python manage.py migrate</div>
             </div>
             <button
               onClick={fetchDjangoData}
