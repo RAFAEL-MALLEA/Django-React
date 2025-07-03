@@ -76,13 +76,22 @@ export default function Index() {
         )}
 
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
-            <p className="text-red-700 text-sm">{error}</p>
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+            <h3 className="text-yellow-800 font-semibold mb-2">
+              ⚠️ Django no está corriendo
+            </h3>
+            <p className="text-yellow-700 text-sm mb-3">{error}</p>
+            <div className="bg-gray-800 text-green-400 p-3 rounded text-left text-sm font-mono mb-3">
+              <div>cd backend</div>
+              <div>pip install -r requirements.txt</div>
+              <div>python manage.py migrate</div>
+              <div>python manage.py runserver 8000</div>
+            </div>
             <button
               onClick={fetchDjangoData}
-              className="mt-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+              className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors"
             >
-              Reintentar
+              Reintentar conexión
             </button>
           </div>
         )}
